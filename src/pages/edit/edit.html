@@ -1,0 +1,67 @@
+<!--
+  Generated template for the EditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-row>
+        <ion-col col-5>
+          <button ion-button (click)="back()"> رجوع </button>
+        </ion-col>
+        <ion-col >
+          <ion-title style=" padding-top:8% " >تعديل</ion-title>
+        </ion-col>
+        </ion-row>
+     
+  </ion-navbar>
+
+
+</ion-header>
+
+<br>
+<br>
+<br>
+
+
+<ion-content padding >
+
+
+    <ion-list dir="rtl" >
+<br>
+
+      
+          <ion-item>
+        <ion-input dir="rtl" type="text" placeholder="الأسم"  [(ngModel)]='this.data.name'></ion-input>
+      </ion-item>
+      
+      <ion-item >
+          <ion-input dir="rtl" type="number" placeholder="رقم الهاتف" [(ngModel)]='this.data.phone'></ion-input>
+     </ion-item>
+       
+     <ion-item>
+      <ion-input dir="rtl" type="text" placeholder="المحافظة" [(ngModel)]='this.data.province'></ion-input>
+     </ion-item>
+<br>
+<br>
+<br>
+        <ion-item class="border" >
+          <ion-textarea rows="8" placeholder="التفاصيل"[(ngModel)]='this.data.letter'></ion-textarea>
+        </ion-item>
+      </ion-list>
+
+      
+
+      <ion-grid>
+         <ion-row justify-content-center>
+   
+            <button ion-button (click)="reWrite()" color='danger' >تعديل </button>
+
+   
+          </ion-row>
+      
+       </ion-grid>
+   
+</ion-content>

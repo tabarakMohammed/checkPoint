@@ -1,0 +1,29 @@
+<ion-content padding>
+  
+    <br>
+    <div *ngIf="!noData" >
+
+  <ion-list dir="rtl" *ngFor='let gift of this.myObject'>
+   
+    
+    <ion-item class="FNA" style="border:#607D8B 1px solid">
+      
+      <ion-row justify-content-center>
+        <ion-icon (click)="delete(gift[0])" 
+        name="md-trash" style="font-size: 20px" ></ion-icon>
+      </ion-row>
+       
+      <h5>رقـــم الحالة : {{gift[1]['numberOfCAse']}} </h5>
+      <h5> الأســــم : {{gift[1]['name']}} </h5>
+      <h5>رقــم الهاتف : {{gift[1]['phone']}} </h5>
+      <h5> المحــافظة : {{gift[1]['province']}}</h5>
+      
+    
+    </ion-item>
+
+
+  </ion-list>
+ 
+  </div>
+    
+</ion-content>

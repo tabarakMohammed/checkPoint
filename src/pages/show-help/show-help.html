@@ -1,0 +1,32 @@
+
+<ion-content padding>
+    
+  <ion-title style="text-align: center;">قائمة طلبات المساعدة</ion-title>
+
+    <br>
+
+    <div *ngIf="!noData" >
+
+  <ion-list dir="rtl" *ngFor='let gift of this.myObject'>
+   
+    
+    <ion-item class="FNA" style="border:#607D8B 1px solid">
+      
+      <ion-row justify-content-center>
+        <ion-icon (click)="delete(gift[0])" 
+        name="md-trash" style="font-size: 20px" ></ion-icon>
+      </ion-row>
+       
+      <h5>نوع المساعدة : {{gift[1]['HelpType']}} </h5>
+      <h5> الأســــم : {{gift[1]['name']}} </h5>
+      <h5>رقــم الهاتف : {{gift[1]['phone']}} </h5>
+      <h5> المحــافظة : {{gift[1]['province']}}</h5>
+      <button ion-button (click)="moreInfo(gift[1]['letter'])" > عرض التفاصيل </button >
+
+    </ion-item>
+  
+  </ion-list>
+ 
+  </div>
+    
+</ion-content>

@@ -1,0 +1,91 @@
+
+
+
+<ion-header>
+  
+    <ion-navbar style="background-color: aliceblue">
+
+
+    </ion-navbar  >
+      
+    <div *ngIf = "this.itRemoved"> تم المسح </div>
+    </ion-header>
+
+
+
+
+
+
+
+
+
+<ion-content padding dir="rtl" >
+<div *ngIf ="!this.itRemoved">
+
+    <img src="{{this.x[0][1]['imageUrl']}}" #myImage (click)="presentImage(myImage)" />
+    
+<div padding style=" border: 1px solid #607D8B;">
+ <h5> {{this.x[0][1]['name']}} </h5>
+ <ion-row>
+   <ion-col col-8>
+      <h5> {{this.x[0][1]['phone']}} </h5> 
+  </ion-col>
+  <ion-col >
+      <h5>{{this.x[0][1]['province']}}</h5>
+    </ion-col>
+</ion-row>
+  </div >
+
+
+  <p  padding style=" border: 1px solid #607D8B;">
+     {{this.x[0][1]['letter']}}</p>
+
+
+     <ion-grid>
+  <ion-row>
+
+    <ion-col>
+      
+        <ion-icon (click)="delete(this.x[0][1]['imageUrl'])" name="md-trash" style="font-size: 20px" ></ion-icon>
+
+       </ion-col>
+
+     <ion-col style="padding-right:85%">
+
+        <ion-icon style="font-size: 20px" name="md-build" 
+        (click)="showEdit( this.x[0][1]['name'],this.x[0][1]['phone'],
+        this.x[0][1]['province'],this.x[0][1]['letter'],this.x[0])"></ion-icon>
+
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+              
+    <div class="txt" style="text-align: center">
+   <ion-input  text-center  type="text"   placeholder="أدخل السعر" 
+   [(ngModel)]='this.data.price'>السعر</ion-input>
+    </div>
+<br>
+    <div class="txt" style="text-align: center">
+     <ion-input  text-center  type="text"   placeholder="أدخل رقم الحالة" 
+    [(ngModel)]='this.data.numberOfCAse'>رقم الحالة</ion-input>
+   </div> 
+
+
+<br>
+
+   <ion-grid>
+      <ion-row justify-content-center>
+
+          <ion-icon style="font-size: 20px" name="md-thumbs-up"(click)="passDataAlert()"> </ion-icon>
+
+
+       </ion-row>
+   
+    </ion-grid>
+
+ 
+
+</div>
+
+</ion-content>

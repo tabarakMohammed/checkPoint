@@ -1,0 +1,40 @@
+
+
+
+<ion-content padding>
+     <div *ngIf="!error1">
+      <br><br><br><br> <br><br> <br><br> <br><br> <br>
+      </div>
+           <div *ngIf="error1" dir="rtl" style="border:black solid 1px">
+            <p >
+             أعد المحاولة<br>
+             <br>  </p>
+             <br> {{this.erroerMessage}}
+             <br><br>
+          </div>
+         
+          <br>
+            <ion-list>
+              
+              <ion-item style="text-align: center"  class="txt" >
+               <ion-label fixed color="dark">  password </ion-label>
+                <ion-input text-center type="password" [(ngModel)]='password'
+                (touchstart)="ok1()" ></ion-input>
+              </ion-item>
+            </ion-list>
+
+
+   
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <ion-grid>
+        <ion-row justify-content-center>
+
+           <button ion-button class="bot" large (click)="ok()">go</button>
+
+
+         </ion-row>
+     
+      </ion-grid>
+  
+ 
+</ion-content>

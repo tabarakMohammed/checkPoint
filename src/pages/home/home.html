@@ -1,0 +1,35 @@
+
+
+
+<ion-content padding >
+  
+    <br>
+
+    <div *ngIf="!noData" >
+
+  <ion-list dir="rtl" *ngFor='let gift of this.myObject' >
+   
+    <ion-item  class="FNA" style="border:#607D8B 1px solid">
+      
+      
+      <p>{{gift[1]['letter']}}</p>
+
+        <br>
+      <ion-grid>
+
+        <ion-row justify-content-center>
+         
+        <button ion-button round (click)="ShowAllInfo(gift[0])">
+           كل البيانات </button>
+
+       </ion-row>
+       </ion-grid>
+
+    </ion-item>
+
+
+  </ion-list>
+</div>
+  
+    
+</ion-content>
